@@ -1,12 +1,10 @@
 import logo from "@/assets/logo.png";
-
 const Footer = () => {
-  return (
-    <footer className="bg-muted/30 border-t border-border py-12">
+  return <footer className="bg-muted/30 border-t border-border py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <img src={logo} alt="Benincasa Informática" className="h-12 w-auto mb-4" />
+            <img src={logo} alt="Benincasa Informática" className="h-24 w-auto mb-4" />
             <p className="text-sm text-muted-foreground">
               29 anos conectando tecnologia, confiança e qualidade.
             </p>
@@ -29,12 +27,7 @@ const Footer = () => {
               Segunda a sexta: 9:30 às 17:00
             </p>
             <div className="mt-4">
-              <a
-                href="https://www.instagram.com/benincasainfo/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:text-primary-dark transition-colors text-sm"
-              >
+              <a href="https://www.instagram.com/benincasainfo/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary-dark transition-colors text-sm">
                 Instagram: @benincasainfo
               </a>
             </div>
@@ -46,8 +39,6 @@ const Footer = () => {
           <p className="mt-1">CNPJ: 14.758.492/0001-93</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
