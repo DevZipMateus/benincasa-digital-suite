@@ -1,5 +1,6 @@
 import { Package, Cpu, HardDrive, Cable, Usb, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const Products = () => {
   const productCategories = [
@@ -7,50 +8,50 @@ const Products = () => {
       icon: Cpu,
       title: "Componentes",
       items: [
-        "Water Cooler",
-        "Cooler",
-        "Fonte para Desktop",
-        "Memória RAM",
-        "SSD Sata",
-        "SSD NVME",
-        "SSD M.2 Sata",
-        "Placa de rede PCI"
+        { name: "Water Cooler", description: "Sistema de refrigeração líquida de alta performance para processadores, mantendo temperaturas ideais mesmo sob carga máxima" },
+        { name: "Cooler", description: "Coolers de qualidade para processadores e gabinetes, garantindo refrigeração eficiente e silenciosa" },
+        { name: "Fonte para Desktop", description: "Fontes de alimentação confiáveis e certificadas para estabilidade e proteção dos seus componentes" },
+        { name: "Memória RAM", description: "Módulos de memória RAM de marcas renomadas para melhorar o desempenho e multitarefa do seu PC" },
+        { name: "SSD Sata", description: "Unidades de armazenamento rápido com interface SATA para upgrades econômicos" },
+        { name: "SSD NVME", description: "SSDs de última geração com velocidades extremas para máximo desempenho" },
+        { name: "SSD M.2 Sata", description: "Armazenamento compacto no formato M.2 com interface SATA para notebooks e PCs modernos" },
+        { name: "Placa de rede PCI", description: "Placas de rede de alta velocidade para conexões estáveis e confiáveis" }
       ]
     },
     {
       icon: Cable,
       title: "Cabos e conectores",
       items: [
-        "Cabo HDMI",
-        "Cabo Display Port",
-        "Cabos Premium USB-C/USB",
-        "Cabos Premium para iPhone",
-        "Cabos Original para iPhone",
-        "Carregador Premium para iPhone",
-        "Carregador Original para iPhone",
-        "Fonte para notebook"
+        { name: "Cabo HDMI", description: "Cabos HDMI de alta qualidade para transmissão de vídeo e áudio em alta definição" },
+        { name: "Cabo Display Port", description: "Cabos Display Port para monitores de alta resolução e taxa de atualização" },
+        { name: "Cabos Premium USB-C/USB", description: "Cabos USB de primeira linha com proteção reforçada e velocidade de transferência máxima" },
+        { name: "Cabos Premium para iPhone", description: "Cabos certificados de alta durabilidade para carregamento rápido e sincronização" },
+        { name: "Cabos Original para iPhone", description: "Cabos originais Apple com garantia de compatibilidade e segurança" },
+        { name: "Carregador Premium para iPhone", description: "Carregadores de qualidade superior com proteção contra sobrecarga" },
+        { name: "Carregador Original para iPhone", description: "Carregadores originais Apple para máxima segurança e eficiência" },
+        { name: "Fonte para notebook", description: "Fontes compatíveis com diversas marcas de notebooks, originais e alternativas de qualidade" }
       ]
     },
     {
       icon: Usb,
       title: "Acessórios",
       items: [
-        "HUB USB-C",
-        "Case para HD Externo",
-        "Pendrive",
-        "Teclados",
-        "Mouses",
-        "Periféricos diversos"
+        { name: "HUB USB-C", description: "Expanda a conectividade do seu dispositivo com múltiplas portas USB, HDMI e leitores de cartão" },
+        { name: "Case para HD Externo", description: "Cases para transformar HDs internos em unidades externas portáteis" },
+        { name: "Pendrive", description: "Pendrives de diversas capacidades para armazenamento e transporte de arquivos" },
+        { name: "Teclados", description: "Teclados mecânicos e de membrana para diferentes necessidades e orçamentos" },
+        { name: "Mouses", description: "Mouses ergonômicos, para jogos ou uso profissional de marcas confiáveis" },
+        { name: "Periféricos diversos", description: "Webcams, headsets, mousepads e outros acessórios para completar sua estação de trabalho" }
       ]
     },
     {
       icon: Zap,
       title: "Nobreaks",
       items: [
-        "Venda de nobreaks",
-        "Manutenção de nobreaks",
-        "Suporte especializado",
-        "Consultoria técnica"
+        { name: "Venda de nobreaks", description: "Nobreaks de diversas capacidades para proteger seus equipamentos contra quedas de energia" },
+        { name: "Manutenção de nobreaks", description: "Serviço completo de manutenção preventiva e corretiva para nobreaks de todas as marcas" },
+        { name: "Suporte especializado", description: "Atendimento técnico qualificado para diagnóstico e solução de problemas" },
+        { name: "Consultoria técnica", description: "Orientação profissional para escolher o nobreak ideal conforme sua necessidade" }
       ]
     }
   ];
@@ -79,14 +80,21 @@ const Products = () => {
               <h3 className="text-base sm:text-lg font-semibold text-foreground mb-3 sm:mb-4">
                 {category.title}
               </h3>
-              <ul className="space-y-2 mb-4 flex-grow">
+              <Accordion type="single" collapsible className="w-full mb-4 flex-grow">
                 {category.items.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground">
-                    <Package className="w-3 h-3 sm:w-4 sm:h-4 text-accent flex-shrink-0 mt-0.5" />
-                    <span>{item}</span>
-                  </li>
+                  <AccordionItem key={idx} value={`item-${idx}`} className="border-b border-border">
+                    <AccordionTrigger className="text-xs sm:text-sm hover:no-underline">
+                      <div className="flex items-start gap-2 text-left">
+                        <Package className="w-3 h-3 sm:w-4 sm:h-4 text-accent flex-shrink-0 mt-0.5" />
+                        <span>{item.name}</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="text-xs sm:text-sm text-muted-foreground pl-6 sm:pl-7">
+                      {item.description}
+                    </AccordionContent>
+                  </AccordionItem>
                 ))}
-              </ul>
+              </Accordion>
               <Button 
                 asChild 
                 className="w-full bg-primary hover:bg-primary-dark text-primary-foreground text-xs sm:text-sm mt-auto"
