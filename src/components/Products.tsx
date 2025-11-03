@@ -82,11 +82,11 @@ const Products = () => {
               key={index} 
               className="bg-card rounded-xl shadow-soft border border-border hover:shadow-strong transition-all duration-300 flex flex-col overflow-hidden"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-56 sm:h-64 overflow-hidden bg-muted">
                 <img 
                   src={category.image} 
                   alt={category.title} 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-4 sm:p-6 flex flex-col flex-grow">
