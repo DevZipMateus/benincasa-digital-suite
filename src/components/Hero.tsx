@@ -17,11 +17,11 @@ const Hero = () => {
             <span className="text-xs sm:text-sm font-medium">29 anos de excelência</span>
           </div>
           
-          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6 px-2">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 px-2">
             PS Benincasa Informática Ltda
           </h1>
           
-          <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto px-4">
+          <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-6 sm:mb-8 max-w-3xl mx-auto px-4">
             Assistência técnica profissional e confiável em Alphaville. Conectando tecnologia, confiança e qualidade há quase três décadas.
           </h2>
 
