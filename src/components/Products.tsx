@@ -1,4 +1,5 @@
 import { Package, Cpu, HardDrive, Cable, Usb, Zap } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Products = () => {
   const productCategories = [
@@ -78,7 +79,7 @@ const Products = () => {
               <h3 className="text-base sm:text-lg font-semibold text-foreground mb-3 sm:mb-4">
                 {category.title}
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-2 mb-4">
                 {category.items.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground">
                     <Package className="w-3 h-3 sm:w-4 sm:h-4 text-accent flex-shrink-0 mt-0.5" />
@@ -86,6 +87,14 @@ const Products = () => {
                   </li>
                 ))}
               </ul>
+              <Button 
+                asChild 
+                className="w-full bg-primary hover:bg-primary-dark text-primary-foreground text-xs sm:text-sm"
+              >
+                <a href="https://wa.me/5511989838381" target="_blank" rel="noopener noreferrer">
+                  Para saber mais clique aqui
+                </a>
+              </Button>
             </div>
           ))}
         </div>

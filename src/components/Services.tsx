@@ -1,5 +1,6 @@
 import { Monitor, Laptop, HardDrive, Wrench } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const Services = () => {
   const services = [
@@ -80,7 +81,7 @@ const Services = () => {
                 <CardDescription className="text-sm sm:text-base">{service.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-4">
                   {service.items.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground">
                       <Wrench className="w-3 h-3 sm:w-4 sm:h-4 text-primary flex-shrink-0 mt-0.5" />
@@ -88,6 +89,14 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
+                <Button 
+                  asChild 
+                  className="w-full bg-primary hover:bg-primary-dark text-primary-foreground text-xs sm:text-sm"
+                >
+                  <a href="https://wa.me/5511989838381" target="_blank" rel="noopener noreferrer">
+                    Para saber mais clique aqui
+                  </a>
+                </Button>
               </CardContent>
             </Card>
           ))}
