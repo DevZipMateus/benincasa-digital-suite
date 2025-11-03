@@ -72,7 +72,7 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
-            <Card key={index} className="bg-card border-border hover:shadow-strong transition-all duration-300">
+            <Card key={index} className="bg-card border-border hover:shadow-strong transition-all duration-300 flex flex-col">
               <CardHeader className="pb-4">
                 <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-primary rounded-lg flex items-center justify-center mb-3 sm:mb-4">
                   <service.icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary-foreground" />
@@ -80,8 +80,8 @@ const Services = () => {
                 <CardTitle className="text-foreground text-lg sm:text-xl">{service.title}</CardTitle>
                 <CardDescription className="text-sm sm:text-base">{service.description}</CardDescription>
               </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 mb-4">
+              <CardContent className="flex-grow flex flex-col">
+                <ul className="space-y-2 mb-4 flex-grow">
                   {service.items.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground">
                       <Wrench className="w-3 h-3 sm:w-4 sm:h-4 text-primary flex-shrink-0 mt-0.5" />
@@ -91,7 +91,7 @@ const Services = () => {
                 </ul>
                 <Button 
                   asChild 
-                  className="w-full bg-primary hover:bg-primary-dark text-primary-foreground text-xs sm:text-sm"
+                  className="w-full bg-primary hover:bg-primary-dark text-primary-foreground text-xs sm:text-sm mt-auto"
                 >
                   <a href="https://wa.me/5511989838381" target="_blank" rel="noopener noreferrer">
                     Para saber mais clique aqui

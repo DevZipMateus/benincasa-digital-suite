@@ -71,7 +71,7 @@ const Products = () => {
           {productCategories.map((category, index) => (
             <div 
               key={index} 
-              className="bg-card p-4 sm:p-6 rounded-xl shadow-soft border border-border hover:shadow-strong transition-all duration-300"
+              className="bg-card p-4 sm:p-6 rounded-xl shadow-soft border border-border hover:shadow-strong transition-all duration-300 flex flex-col"
             >
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
                 <category.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
@@ -79,7 +79,7 @@ const Products = () => {
               <h3 className="text-base sm:text-lg font-semibold text-foreground mb-3 sm:mb-4">
                 {category.title}
               </h3>
-              <ul className="space-y-2 mb-4">
+              <ul className="space-y-2 mb-4 flex-grow">
                 {category.items.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground">
                     <Package className="w-3 h-3 sm:w-4 sm:h-4 text-accent flex-shrink-0 mt-0.5" />
@@ -89,7 +89,7 @@ const Products = () => {
               </ul>
               <Button 
                 asChild 
-                className="w-full bg-primary hover:bg-primary-dark text-primary-foreground text-xs sm:text-sm"
+                className="w-full bg-primary hover:bg-primary-dark text-primary-foreground text-xs sm:text-sm mt-auto"
               >
                 <a href="https://wa.me/5511989838381" target="_blank" rel="noopener noreferrer">
                   Para saber mais clique aqui
