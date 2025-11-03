@@ -55,33 +55,33 @@ const Products = () => {
   ];
 
   return (
-    <section id="produtos" className="py-16 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+    <section id="produtos" className="py-12 sm:py-16 md:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
             Produtos
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-base sm:text-lg px-4">
             Linha completa de produtos e acessórios de informática
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {productCategories.map((category, index) => (
             <div 
               key={index} 
-              className="bg-card p-6 rounded-xl shadow-soft border border-border hover:shadow-strong transition-all duration-300"
+              className="bg-card p-4 sm:p-6 rounded-xl shadow-soft border border-border hover:shadow-strong transition-all duration-300"
             >
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <category.icon className="w-6 h-6 text-primary" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                <category.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-4">
+              <h3 className="text-base sm:text-lg font-semibold text-foreground mb-3 sm:mb-4">
                 {category.title}
               </h3>
               <ul className="space-y-2">
                 {category.items.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <Package className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                  <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground">
+                    <Package className="w-3 h-3 sm:w-4 sm:h-4 text-accent flex-shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -90,11 +90,11 @@ const Products = () => {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-muted-foreground mb-4">
+        <div className="mt-8 sm:mt-12 text-center px-4">
+          <p className="text-muted-foreground mb-3 sm:mb-4 text-sm sm:text-base">
             Atendemos pessoas físicas e empresas que buscam soluções confiáveis, duradouras e sustentáveis.
           </p>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-xs sm:text-sm text-muted-foreground">
             Com a qualidade e honestidade que representam nossos 29 anos de atuação em Alphaville.
           </p>
         </div>
