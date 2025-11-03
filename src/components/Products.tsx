@@ -32,10 +32,10 @@ const Products = () => {
         { name: "Cabo Display Port", description: "Cabos Display Port para monitores de alta resolução e taxa de atualização" },
         { name: "Cabos Premium USB-C/USB", description: "Cabos USB de primeira linha com proteção reforçada e velocidade de transferência máxima" },
         { name: "Cabos Premium para iPhone", description: "Cabos certificados de alta durabilidade para carregamento rápido e sincronização" },
-        { name: "Cabos Original para iPhone", description: "Cabos originais Apple com garantia de compatibilidade e segurança" },
+        { name: "Cabos de boa qualidade para iPhone", description: "Cabos de boa qualidade com garantia de compatibilidade e segurança" },
         { name: "Carregador Premium para iPhone", description: "Carregadores de qualidade superior com proteção contra sobrecarga" },
-        { name: "Carregador Original para iPhone", description: "Carregadores originais Apple para máxima segurança e eficiência" },
-        { name: "Fonte para notebook", description: "Fontes compatíveis com diversas marcas de notebooks, originais e alternativas de qualidade" }
+        { name: "Carregador de boa qualidade para iPhone", description: "Carregadores de boa qualidade para máxima segurança e eficiência" },
+        { name: "Fonte para notebook", description: "Fontes compatíveis com diversas marcas de notebooks, de boa qualidade" }
       ]
     },
     {
