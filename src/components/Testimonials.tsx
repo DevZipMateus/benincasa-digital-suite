@@ -63,6 +63,30 @@ const testimonials = [
     rating: 5,
     text: "Ótima loja, bom atendimento e preços bons. Estética muito boa também. Recomendo",
     date: "Há 36 semanas"
+  },
+  {
+    name: "Levi Alves Sena Sena",
+    rating: 5,
+    text: "Muito boa!! Atendimento top e rápido para emergência!!",
+    date: "Há 13 semanas"
+  },
+  {
+    name: "Caio Vinícius Santos e Silva",
+    rating: 5,
+    text: "A equipe da Benincasainfo fez um trabalho incrível no meu desktop! Apesar da complexidade do problema, eles resolveram tudo na hora, no mesmo dia. O serviço foi extremamente profissional e o preço justo. Estou muito satisfeito e recomendo para todos da região de Alphaville que precisam de um atendimento rápido e de qualidade.",
+    date: "Há 17 semanas"
+  },
+  {
+    name: "Renan Clemente Dourado",
+    rating: 5,
+    text: "Antendimento rápido e especializado, e já te dão dicas do que vc pode precisar preventivamente no futuro! 👊🏻",
+    date: "Há 4 semanas"
+  },
+  {
+    name: "Tic Tac",
+    rating: 5,
+    text: "Loja muito boa, tem tudo e com preço bom.",
+    date: "Há 37 semanas"
   }
 ];
 
