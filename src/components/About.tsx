@@ -1,4 +1,5 @@
 import { Heart, Eye, Star, History } from "lucide-react";
+import aboutShop from "@/assets/about-shop.jpg";
 
 const About = () => {
   return (
@@ -38,6 +39,14 @@ const About = () => {
                 sustentados por 29 anos de experiência e credibilidade.
               </p>
             </div>
+          </div>
+
+          <div className="mb-8 sm:mb-12 rounded-xl overflow-hidden shadow-strong">
+            <img 
+              src={aboutShop} 
+              alt="Benincasa Informática - Nossa loja em Alphaville" 
+              className="w-full h-48 sm:h-64 md:h-80 object-cover"
+            />
           </div>
 
           <div className="bg-gradient-primary p-4 sm:p-6 md:p-8 rounded-xl text-primary-foreground mb-8 sm:mb-12">

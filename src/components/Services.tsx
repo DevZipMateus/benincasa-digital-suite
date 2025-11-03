@@ -2,6 +2,9 @@ import { Monitor, Laptop, HardDrive, Wrench } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import servicePcGamer from "@/assets/service-pc-gamer.jpg";
+import serviceNotebook from "@/assets/service-notebook.jpg";
+import servicePc from "@/assets/service-pc.jpg";
 
 const Services = () => {
   const services = [
@@ -9,6 +12,7 @@ const Services = () => {
       icon: Monitor,
       title: "PC Gamer",
       description: "Serviços especializados para computadores gamer",
+      image: servicePcGamer,
       items: [
         { name: "Formatação e backup", description: "Reinstalação completa do sistema operacional com backup seguro de todos os seus dados importantes" },
         { name: "Limpeza interna", description: "Remoção de poeira e sujeira dos componentes para melhor desempenho e refrigeração" },
@@ -26,6 +30,7 @@ const Services = () => {
       icon: Laptop,
       title: "Notebook Gamer",
       description: "Manutenção completa para notebooks gamer",
+      image: serviceNotebook,
       items: [
         { name: "Backup e formatação", description: "Reinstalação do sistema com backup completo de seus arquivos e configurações" },
         { name: "Instalação de programas", description: "Configuração de drivers, jogos e aplicativos essenciais para seu notebook" },
@@ -44,6 +49,7 @@ const Services = () => {
       icon: HardDrive,
       title: "PC",
       description: "Assistência técnica para computadores convencionais",
+      image: servicePc,
       items: [
         { name: "Formatação e backup", description: "Reinstalação do sistema com proteção total dos seus dados pessoais" },
         { name: "Limpeza interna", description: "Manutenção preventiva removendo poeira e melhorando a ventilação" },
@@ -73,7 +79,14 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
-            <Card key={index} className="bg-card border-border hover:shadow-strong transition-all duration-300 flex flex-col">
+            <Card key={index} className="bg-card border-border hover:shadow-strong transition-all duration-300 flex flex-col overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={service.image} 
+                  alt={service.title} 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <CardHeader className="pb-4">
                 <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-primary rounded-lg flex items-center justify-center mb-3 sm:mb-4">
                   <service.icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary-foreground" />
