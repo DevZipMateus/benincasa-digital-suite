@@ -4,7 +4,7 @@ import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative pt-20 sm:pt-24 md:pt-28 pb-12 sm:pb-16 md:pb-20 overflow-hidden">
+    <section className="relative pt-24 sm:pt-32 md:pt-36 pb-12 sm:pb-16 md:pb-20 overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBackground})` }}
